@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import mobile from '../images/mobile.png';
 import sltLogo from '../images/slt-mobitel-logo.png';
 
@@ -12,12 +13,16 @@ function HomePage() {
             <img src={sltLogo} alt="SLT Logo" className="w-36 h-auto" />
           </div>
           <div className="flex space-x-4">
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              Signup
-            </button>
-            <button className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
-              Login
-            </button>
+            <Link to="/signup">
+              <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Signup
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                Login
+              </button>
+            </Link>
           </div>
         </header>
 
@@ -31,9 +36,11 @@ function HomePage() {
             <h2 className="text-2xl font-semibold mb-8">
               Book Your Seat with Ease!
             </h2>
-            <button className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
-              Contact Us
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+                Contact Us
+              </button>
+            </Link>
           </div>
 
           {/* Right Side - Image */}
