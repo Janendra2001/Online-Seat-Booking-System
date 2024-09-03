@@ -19,6 +19,10 @@ function App() {
                     <Route path="/admindashboard/reports" element={<Reports />} />
                     <Route path="/admindashboard/profile" element={<Profile />} />
                 </Route>
+                <Route path="/traineedashboard" element={< TraineeDashboard/>}>
+                    <Route path="/traineedashboard/book-seats" element={<BookSeats />} />
+                    <Route path="/traineedashboard/my-bookings" element={<MyBookings />} />
+                </Route>
             </Routes>
     </Router>
   );
