@@ -7,6 +7,9 @@ import ViewBookings from './Components/Admin/ViewBookings.js';
 import Reports from './Components/Admin/Reports.js';
 import Profile from './Components/Admin/Profile.js';
 import HomePage from './Components/HomePage.js';
+import TraineeDashboard from './Components/Trainee/TraineeDashboard.js';
+import BookSeats from './Components/Trainee/BookSeats.js';
+import MyBookings from './Components/Trainee/MyBookings.js';
 
 function App() {
   return (
