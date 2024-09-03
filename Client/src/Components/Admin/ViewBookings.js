@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ViewBookings = () => {
   return <div className="flex h-screen">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import profile from '../../images/profile.jpg';
 
 const Profile = () => {

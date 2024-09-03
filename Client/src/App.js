@@ -10,6 +10,7 @@ import HomePage from './Components/HomePage.js';
 import TraineeDashboard from './Components/Trainee/TraineeDashboard.js';
 import BookSeats from './Components/Trainee/BookSeats.js';
 import MyBookings from './Components/Trainee/MyBookings.js';
+import TraineeProfile from './Components/Trainee/Profile.js';
 import Login from './Components/Login.js';
 import SignUp from './Components/SignUp.js';
 import Contact from './Components/Contact.js';
@@ -29,9 +30,10 @@ function App() {
                     <Route path="/admindashboard/reports" element={<Reports />} />
                     <Route path="/admindashboard/profile" element={<Profile />} />
                 </Route>
-                <Route path="/traineedashboard/:traineeId" element={< BookSeats/>}>
-                    <Route path="/traineedashboard/:traineeId/book-seats" element={<BookSeats />} />
-                    <Route path="/traineedashboard/:traineeId/my-bookings" element={<MyBookings />} />
+                <Route path="/traineedashboard/traineeId" element={< TraineeDashboard/>}>
+                    <Route path="/traineedashboard/traineeId/book-seats" element={<BookSeats />} />
+                    <Route path="/traineedashboard/traineeId/my-bookings" element={<MyBookings />} />
+                    <Route path="/traineedashboard/traineeId/profile" element={<TraineeProfile />} />
                 </Route>
             </Routes>
     </Router>

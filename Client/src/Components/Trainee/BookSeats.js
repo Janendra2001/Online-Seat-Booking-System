@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import TraineeDashboard from './TraineeDashboard';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -22,7 +21,7 @@ function BookSeats() {
 
   return (
     <div className="min-h-screen bg-gray-800 p-4">
-      <TraineeDashboard />
+      
       
       {/* Main Content */}
       <div className="flex justify-between items-start mt-8">
