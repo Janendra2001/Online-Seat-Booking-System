@@ -78,12 +78,12 @@ function Signup() {
               />
             </div>
             <div className="flex items-center justify-center">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              >
-                Sign Up
-              </button>
+            <Link
+                  to="/otp"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center block"
+                  >
+                  Sign Up
+            </Link>
             </div>
             <div className="text-center mt-4">
               <p className="text-gray-600">
