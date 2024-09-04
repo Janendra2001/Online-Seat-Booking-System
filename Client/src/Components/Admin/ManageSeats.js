@@ -6,10 +6,10 @@ const ManageSeats = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedSeat, setSelectedSeat] = useState(null);
   const [specialRequests, setSpecialRequests] = useState([
-    { id: 1, traineeId: 'T001', message: 'Need a seat near the window', status: 'In Progress' },
-    { id: 4, traineeId: 'T004', message: 'Prefer a seat in a quieter area', status: 'In Progress' },
-    { id: 13, traineeId: 'T005', message: 'Need a seat near the window', status: 'In Progress' },
-    { id: 2, traineeId: 'T002', message: 'Prefer a seat in a quieter area', status: 'In Progress' },
+    { id: 1, traineeId: 'T001', date: '2024/8/25', message: 'Need a seat near the window', status: 'In Progress' },
+    { id: 4, traineeId: 'T004', date: '2024/8/27', message: 'Prefer a seat in a quieter area', status: 'In Progress' },
+    { id: 13, traineeId: 'T005', date: '2024/8/30', message: 'Need a seat near the window', status: 'In Progress' },
+    { id: 2, traineeId: 'T002', date: '2024/8/31', message: 'Prefer a seat in a quieter area', status: 'In Progress' },
   ]);
   const [selectedRequest, setSelectedRequest] = useState(null);
 
@@ -127,6 +127,7 @@ const ManageSeats = () => {
               onClick={() => handleRequestClick(request)}
             >
               <p className="text-sm font-bold">Trainee ID: {request.traineeId}</p>
+              <p className="text-sm"><strong>Date:</strong> {request.date}</p>
               <p className="text-sm">{request.message}</p>
               <p className="text-sm font-semibold">Status: {request.status}</p>
             </div>
@@ -138,6 +139,7 @@ const ManageSeats = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Special Request Details</h3>
               <p><strong>Trainee ID:</strong> {selectedRequest.traineeId}</p>
+              <p><strong>Date:</strong> {selectedRequest.date}</p>
               <p className="mt-2"><strong>Message:</strong> {selectedRequest.message}</p>
               <div className="mt-4 flex gap-2">
                 <button

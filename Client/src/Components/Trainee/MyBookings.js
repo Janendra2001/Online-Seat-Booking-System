@@ -12,8 +12,8 @@ function MyBookings() {
   ];
 
   const specialRequests = [
-    { id: 'R1', message: 'Need a seat near the window', status: 'In Progress' },
-    { id: 'R2', message: 'Prefer a seat in a quieter area', status: 'Done' },
+    { id: 'R1', date: '2024/8/25', message: 'Need a seat near the window', status: 'In Progress' },
+    { id: 'R2', date: '2024/8/27', message: 'Prefer a seat in a quieter area', status: 'Done' },
   ];
 
   const handleCancel = (id) => {
@@ -84,6 +84,7 @@ function MyBookings() {
           {specialRequests.map((request) => (
             <div key={request.id} className="p-4 border rounded-lg">
               <p className="text-sm"><strong>Request ID:</strong> {request.id}</p>
+              <p className="text-sm"><strong>Date:</strong> {request.date}</p>
               <p className="text-sm"><strong>Message:</strong> {request.message}</p>
               <p className={`text-sm mt-2 font-bold ${request.status === 'In Progress' ? 'text-yellow-600' : request.status === 'Done' ? 'text-green-600' : 'text-red-600'}`}>
                 <strong>Status:</strong> {request.status}
