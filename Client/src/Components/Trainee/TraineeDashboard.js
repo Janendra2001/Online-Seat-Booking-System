@@ -31,7 +31,7 @@ const TraineeDashboard = () => {
           <NavLink to="/traineedashboard/traineeId/profile">
             <img src={profilePic} alt="Profile" className="w-12 h-12 rounded-full cursor-pointer" />
           </NavLink>
-          <button className="bg-red-500 text-white px-4 py-2 rounded-md">
+          <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-md">
             LogOut
           </button>
         </div>

@@ -29,7 +29,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
                 <div className="mt-auto p-4">
-                    <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">
+                    <button className="w-full bg-red-800 hover:bg-red-600 text-white py-2 px-4 rounded-xl">
                         LogOut
                     </button>
                 </div>
