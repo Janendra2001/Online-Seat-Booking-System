@@ -1,17 +1,21 @@
 import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import image from '../images/image.png'; // Adjust the path to your image
 import sltlogo from '../images/slt-mobitel-logo.png';
-import { Link } from 'react-router-dom';
 
 function Login() {
-  const [email, setEmail] = useState('');
+  const [loginAs, setLoginAs] = useState('trainee');
+  const [traineeId, setTraineeId] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    if (loginAs === 'trainee') {
+      navigate(`/traineedashboard/traineeId/book-seats`);
+    } else if (loginAs === 'admin') {
+      navigate('/admindashboard/manage-seats');
+    }
   };
 
   return (
@@ -26,15 +30,29 @@ function Login() {
           </div>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-                Trainee ID
+              <label htmlFor="loginAs" className="block text-gray-700 font-bold mb-2">
+                Login As
+              </label>
+              <select
+                id="loginAs"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={loginAs}
+                onChange={(e) => setLoginAs(e.target.value)}
+              >
+                <option value="trainee">Trainee</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label htmlFor="traineeId" className="block text-gray-700 font-bold mb-2">
+                {loginAs === 'trainee' ? 'Trainee ID' : 'Admin ID'}
               </label>
               <input
-                type="email"
-                id="email"
+                type="text"
+                id="traineeId"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={traineeId}
+                onChange={(e) => setTraineeId(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -70,12 +88,12 @@ function Login() {
       </div>
 
       {/* Image Section */}
-      <div className="relative flex-1">
+      <div className="relative flex justify-end bg-gray-800">
         <img
           src={image}
-          alt="Login"
-          className="w-full h-full object-cover object-center"
-          style={{ maxWidth: '800px', maxHeight: '750px' }}
+          alt="Signup"
+          className="object-cover object-center rounded-tl-4xl rounded-bl-4xl"
+          style={{ width: '600px', height: '728px' }}
         />
         <Link
           to="/contact"

@@ -21,7 +21,7 @@ function Signup() {
   return (
     <div className="flex min-h-screen overflow-hidden">
       {/* Form Section */}
-      <div className="flex-1 flex flex-col justify-center items-center bg-gray-100 p-4">
+      <div className="flex-1 flex flex-col justify-center items-center bg-gray-800 p-4">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md" style={{ maxWidth: '600px', maxHeight: '700px' }}>
           <div className="text-center mb-4">
           <img src={sltlogo} alt="SLT Mobitel Logo" className="w-22 h-16 mx-auto" />
@@ -98,20 +98,21 @@ function Signup() {
       </div>
 
       {/* Image Section */}
-      <div className="relative flex-1">
-        <img
-          src={image}
-          alt="Signup"
-          className="w-full h-full object-cover object-center"
-          style={{ maxWidth: '800px', maxHeight: '750px' }}
-        />
-        <Link
-          to="/contact"
-          className="absolute top-4 right-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Contact Us
-        </Link>
+      <div className="relative flex justify-end bg-gray-800">
+          <img
+            src={image}
+            alt="Signup"
+            className="object-cover object-center rounded-tl-4xl rounded-bl-4xl"
+            style={{ width: '600px', height: '728px' }}
+          />
+          <Link
+            to="/contact"
+            className="absolute top-4 right-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Contact Us
+          </Link>
       </div>
+
     </div>
   );
 }
