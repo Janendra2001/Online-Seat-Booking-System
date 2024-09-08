@@ -13,6 +13,7 @@ import MyBookings from './Components/Trainee/MyBookings.js';
 import TraineeProfile from './Components/Trainee/Profile.js';
 import Login from './Components/Login.js';
 import SignUp from './Components/SignUp.js';
+import AdminSignUp from './Components/Admin/AdminSignup.js';
 import Contact from './Components/Contact.js';
 import OTP from './Components/OTP.js';
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
+                <Route path="/adminsignup" element={<AdminSignUp />} />
                 <Route path="/otp" element={<OTP />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/admindashboard" element={<Dashboard />}>
