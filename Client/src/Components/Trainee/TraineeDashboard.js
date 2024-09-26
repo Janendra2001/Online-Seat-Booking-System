@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, Link } from 'react-router-dom';
 import profilePic from '../../images/profile.jpg';
 import sltlogo from '../../images/slt-mobitel-logo.png';
 
@@ -32,7 +32,9 @@ const TraineeDashboard = () => {
             <img src={profilePic} alt="Profile" className="w-12 h-12 rounded-full cursor-pointer" />
           </NavLink>
           <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-md">
+            <Link to = "/home">
             LogOut
+            </Link>
           </button>
         </div>
       </div>
